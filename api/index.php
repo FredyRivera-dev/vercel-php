@@ -168,6 +168,7 @@ define('APP_ENTRY', true);
 
     <div class="actions">
       <a class="btn btn-primary" href="https://vercel.com/dashboard" target="_blank">Open dashboard</a>
+      <a class="btn" href="https://vercel.com/docs" target="_blank">See docs</a>
     </div>
   </main>
 
