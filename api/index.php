@@ -177,6 +177,16 @@ define('APP_ENTRY', true);
   </footer>
 
   <script>
+    // Env para el navegador: en Vercel las variables solo existen en el servidor (PHP),
+    // así que las pasamos al frontend aquí. CLOUD_NAME y UPLOAD_PRESET son públicas por diseño.
+    // Esto solo es recomendable con credenciales que sean explicitamente publicas por diseño.
+    window.ENV = {
+      CLOUD_NAME: <?= json_encode(getenv('CLOUD_NAME') ?: '') ?>,
+      UPLOAD_PRESET: <?= json_encode(getenv('UPLOAD_PRESET') ?: '') ?>
+    };
+  </script>
+
+  <script>
     var el = document.getElementById("today");
     var now = new Date();
     el.dateTime = now.toISOString().slice(0, 10);
