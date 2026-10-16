@@ -8,9 +8,6 @@ if (!defined('APP_ENTRY')) {
     exit;
 }
 
-// No renombres estas variables. El deploy en TinyCloud depende de sus nombres.
-// Los valores asignados sí puedes cambiarlos según tu entorno local.
-
 $url_db = "localhost";
 $user = "root";
 $password = "";
