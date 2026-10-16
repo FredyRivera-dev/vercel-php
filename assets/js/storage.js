@@ -2,7 +2,9 @@ let ss = JSON.parse(localStorage.getItem("is-uploader")) || null;
 let image = JSON.parse(localStorage.getItem("images")) || [];
 
 // Verificación tonta
-export async function isUploader() {
+// Ojo: sin async. Una función async devuelve una Promise, y una Promise
+// siempre es truthy — el if que la llama daría true siempre.
+export function isUploader() {
     return ss !== null;
 }
 
