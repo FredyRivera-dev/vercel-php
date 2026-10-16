@@ -2,8 +2,8 @@
 const CLOUD_NAME = window.ENV?.CLOUD_NAME || '';
 const UPLOAD_PRESET = window.ENV?.UPLOAD_PRESET || '';
 
-// Limite de 10MB para subir
-const MAX_BYTES = 10 * 1024 * 1024;
+// Limite de 10MB para subir (Por cierto, usen export si quieren hacer accesible una función o variable desde otro archivo que la importe)
+export const MAX_BYTES = 10 * 1024 * 1024;
 
 // Por cierto estoy delegando la carga de imagenes al navegador en vez del servidor con php
 // Se que estoy usando spanglish, pero ya estoy acostumbrado a esto jaja.

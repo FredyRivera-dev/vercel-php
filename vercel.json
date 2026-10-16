@@ -6,6 +6,7 @@
     }
   },
   "rewrites": [
+    { "source": "/upload", "destination": "/api/upload.php" },
     { "source": "/(.*)", "destination": "/api/index.php" }
   ]
 }
